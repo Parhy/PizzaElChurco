@@ -1,0 +1,187 @@
+body
+{
+	background-color: #56050A;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+nav
+{
+	background-color: #FCAA0A;
+}
+
+.redes
+{
+	margin-top: 1em;
+}
+
+footer
+{
+	background-color: #F8C93C;
+}
+
+.card-title
+{
+	text-align: center;
+}
+
+.card.bg-warning
+{
+	color: black;
+}
+
+h6.card-subtitle
+{
+	color: #A30408;
+}
+
+.footer-copyright
+{
+	background-color: #FCAA0A;
+}
+
+.primera-columna
+{
+	background-color: #D23507;
+}
+
+.segunda-columna
+{
+	background-color: #A30408;
+}
+
+.tercera-columna
+{
+	background-color: #D23507;
+}
+
+.tercera-columna, .segunda-columna, .tercera-columna
+{
+	color: #FFFFFF;
+}
+
+.modal-header
+{
+	background-color: #F8C93C;
+}
+
+.modal-body
+{
+	background-color: #FCAA0A;
+}
+
+.carousel-headline
+{
+  	-webkit-text-stroke-width: 0.05em;
+	-webkit-text-stroke-color: #000000;
+	font-family: Impact;
+}
+
+.carousel-headline2
+{
+  	-webkit-text-stroke-width: 0.08em;
+	-webkit-text-stroke-color: #000000;
+	font-family: Impact;
+}
+
+.linksFooter:link, .linksFooter:visited {
+	color: #A30408;
+	cursor: pointer;
+}
+
+ 	
+.linksFooter:link:active, .linksFooter:visited:active {
+	color: #D23507;
+}
+
+.btn-custom-accordion, .btn-custom-accordion:visited
+{
+	color: #A30408;
+}
+
+.btn-custom-accordion:hover, .btn-custom-accordion:hover:visited
+{
+	color: #A30408;
+}
+
+.btn-custom-accordion:active, .btn-custom-accordion:visited:active
+{
+	color: #D23507;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.embed-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > i {
+    width: 100em;
+}
+
+.loader.hidden {
+    animation: fadeOut 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}

@@ -1,0 +1,356 @@
+ <!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Pizzas el churco</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Página de despachos a domicilio, Pizzas el churco">
+  <meta name="keywords" content="pizza, pizzeria, despacho, pizzas">
+  <meta name="autor" content="Cristian Serrano, Camilo Calderon y Santiago Angulo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="icon" href="https://docs.google.com/uc?export=open&id=1Z4EZNnvQLcHZIWBDsqV9Ejippd5OAQdZ">
+  <link rel="stylesheet" type="text/css" href="../codigoPizza/cssPizza/styleSheet.css">
+  <link rel="stylesheet" type="text/css" href="../codigoPizza/cssPizza/flechas.css">
+  <link rel="stylesheet" type="text/css" href="../codigoPizza/cssPizza/search.css">
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="../codigoPizza/jsPizza/loading.js"></script>
+  <script type="text/javascript" src="../codigoPizza/jQueryPizza/validadNumero.js" ></script>
+  <script type="text/javascript" src="../codigoPizza/jQueryPizza/mayuscula.js" ></script>
+  <script type="text/javascript" src="../codigoPizza/jQueryPizza/autostart.js" ></script>
+  <script src="https://kit.fontawesome.com/56989ccae6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<iframe src="French Accordion - Traditionell Musette..mp3" allow="autoplay" style="display:none" id="iframeAudio">
+</iframe> 
+<div class="loader">
+      <i class="fas fa-spinner fa-pulse fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+  </div>
+  <nav class="navbar navbar-expand-md sticky-top navbar-light">
+    <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">
+      <img src="https://docs.google.com/uc?export=open&id=1Z4EZNnvQLcHZIWBDsqV9Ejippd5OAQdZ" width="24em">
+      <a class="navbar-brand" href="http://127.0.0.1:5500/index.html">Pizzas el churco</a>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="http://10.6.101.53/20192B102/index.php#pizzas">Pizzas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="about.php">Sobre nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://goo.gl/maps/VVtnEF16iUoqjxTk9" target="_Blank">Encuéntranos</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <button class="btn btn-danger mr-sm-2" type="button" data-toggle="modal" data-target="#register">Registrarse</button>
+        <button class="btn btn-danger my-2 my-sm-0" type="button" data-toggle="modal" data-target="#loggin">Iniciar sesión</button>
+      </form>
+    </div>
+  </nav>
+  <div class="modal fade" id="loggin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Ingrese sus datos</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-signin" name="elForm1">
+						<div class="text-center mb-4">
+							<img class="mb-4" src="https://docs.google.com/uc?export=open&id=1Z4EZNnvQLcHZIWBDsqV9Ejippd5OAQdZ" alt="" width="72em" height="72em">
+							<h1 class="h3 mb-3 font-weight-normal">Pizzas el churco</h1>
+							<p>Las mejores Pizzas de toda Bucaramanga</p>
+						</div>
+	
+
+
+						<div class="form-label-group">
+							<label for="inputEmail">Correo electrónico:</label>
+							<input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus name="correo2">
+						</div>
+						<br>
+						<div class="form-label-group">
+							<label for="inputPassword">Contraseña:</label>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required name="contraseñalogueada">
+						</div>
+						<br>
+						<div class="checkbox mb-3">
+							<label>
+								<input type="checkbox" value="remember-me"> Recuérdame
+							</label>
+						</div>
+						<div class="form-row text-center">
+   							 <div class="col-12">
+       								<input class="btn btn-block btn-danger mr-sm-2 btn-primary f" type="submit" value="Ingresar" name="ingresar">
+    						</div>
+ 						</div>
+						
+						<p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end modal-loggin -->
+
+	<!-- modal-register -->
+	<div class="modal fade" id="register" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Registre sus datos</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-signin" name="elform2" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"])?>">
+						<div class="text-center mb-4">
+							<img class="mb-4" src="https://docs.google.com/uc?export=open&id=1Z4EZNnvQLcHZIWBDsqV9Ejippd5OAQdZ" alt="" width="72em" height="72em">
+							<h1 class="h3 mb-3 font-weight-normal">Pizzas el churco</h1>
+							<p>Las mejores Pizzas de toda Bucaramanga</p>
+						</div>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-label-group">
+									<label for="inputEmail">Nombre:</label>
+									<input type="name" id="inputname" class="form-control" placeholder="Nombre" required autofocus name="nombre">
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="form-label-group">
+									<label for="inputEmail">Apellido:</label>
+									<input type="name" id="inputlastanme" class="form-control" placeholder="Apellido" required autofocus name="apellido">
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="form-label-group">
+									<label for="inputEmail">Correo electrónico:</label>
+									<input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required autofocus name="correo">
+								</div>
+							</div>
+							<br>
+							<div class="col-sm-6">
+								<div class="form-label-group">
+									<label for="inputPassword">Teléfono:</label>
+									<input type="number" id="inputnumber" class="form-control" placeholder="Teléfono" required data-validation="number" data-validation-ignore="e" name="telefono" 	maxl ength=10>
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="form-label-group">
+							<label for="inputPassword">Contraseña:</label>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required name="contraseña">
+						</div>
+						<br>
+						<div class="form-label-group">
+							<label for="inputPassword">Confirmar contraseña:</label>
+							<input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required name="confirmarContraseña">
+						</div>
+						<br>
+						<div class="form-row text-center">
+   							 <div class="col-12">
+       								<input class="btn btn-block btn-danger mr-sm-2 btn-primary f" type="submit" value="Ingresar" name="registrar">
+    						</div>
+ 						</div>
+						<p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+  <br>
+  <div class="row">
+    <div class="col-sm-4 d-flex justify-content-around">
+      <div class="card bg-warning" style="width: 18em;">
+        <img src="https://docs.google.com/uc?export=open&id=1veJkvj2YhMM1csgoIs4wFk8A7GvKsX_b" class="card-img-top" alt="Foto de Cristian" height="320em">
+        <div class="card-body">
+          <h5 class="card-title">Cristian Guillermo Serrano Acevedo</h5>
+          <p class="card-text">Lider del grupo, desarrollador especializado en Frontend.</p>
+        </div>
+        <div class="card-body">
+          <!-- Links -->
+          <ul class="list-unstyled">
+            <li>
+              <a class="linksFooter" href="https://www.facebook.com/cristian.g.serrano" target="_blank">
+                <i class="fab fa-facebook-square fa-2x"></i>&nbsp
+                Facebook
+              </a>
+            </li>
+            <li class="redes">
+              <a class="linksFooter" href="https://www.pinterest.ca/cristiangserran/" target="_blank">
+                <i class="fab fa-pinterest-square fa-2x" aria-hidden="true"></i>&nbsp
+                Pinterest
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-around">
+      <div class="card bg-warning" style="width: 18em;">
+        <img src="https://docs.google.com/uc?export=open&id=1NITmCNPRoZ-bVkP4ocaskx_WDNry7jPp" class="card-img-top" alt="Foto de Santiago" height="320em">
+        <div class="card-body">
+          <h5 class="card-title">Santiago Angulo Florez</h5>
+          <p class="card-text">Desarrollador especializado en Frontend y hojas de estilo.</p>
+        </div>
+        <div class="card-body">
+          <!-- Links -->
+          <ul class="list-unstyled">
+            <li>
+              <a class="linksFooter" href="https://www.facebook.com/SantiagoAngulo.COAL" target="_blank">
+                
+                <i class="fab fa-facebook-square fa-2x"></i>&nbsp
+                Facebook
+              </a>
+            </li>
+            <li class="redes">
+              <a class="linksFooter" href="https://www.instagram.com/santiagoafl/?hl=es-la" target="_blank">
+                <i class="fab fa-instagram-square fa-2x" aria-hidden="true"></i>&nbsp
+                Instagram
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4 d-flex justify-content-around">
+      <div class="card bg-warning" style="width: 18em;">
+        <img src="https://docs.google.com/uc?export=open&id=1VcV-UAnf6y4514jeG6w8uZJ-dkrzpc-4" class="card-img-top" alt="Foto de Camilo" height="320em">
+        <div class="card-body">
+          <h5 class="card-title">Camilo Andres Calderon Carrillo</h5>
+          <p class="card-text">Desarrollador especializado en Backend y bases de datos.</p>
+        </div>
+        <div class="card-body">
+          <!-- Links -->
+          <ul class="list-unstyled">
+            <li>
+              <a class="linksFooter" href="https://www.facebook.com/CamiloCalderon13" target="_blank">
+                
+                <i class="fab fa-facebook-square fa-2x"></i>&nbsp
+                Facebook
+              </a>
+            </li>
+            <li class="redes">
+              <a class="linksFooter" href="https://www.instagram.com/?hl=es-la" target="_blank">
+                <i class="fab fa-instagram-square fa-2x" aria-hidden="true"></i>&nbsp
+                Instagram
+              </a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <footer class="page-footer font-small pt-4">
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+      <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">Pizzas el churco</h5>
+          <p>Para más información, pedidos, entregas y reclamos, por favor, no dude en contactar con nosotros.</p>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase">Redes sociales</h5>
+          <ul class="list-unstyled">
+
+            <li class="redes">
+              <a class="linksFooter" href="https://www.facebook.com/Pizzas-el-churco-100530761540552/" target="_blank">
+                
+                <i class="fab fa-facebook-square fa-2x"></i>&nbsp
+                Facebook
+              </a>
+            </li>
+            <li class="redes">
+              <a class="linksFooter" href="https://twitter.com/ChurcoPizzas" target="_blank">
+                <i class="fab fa-twitter-square fa-2x" aria-hidden="true"></i>&nbsp
+                Twitter
+              </a>
+            </li>
+            <li class="redes">
+              <a class="linksFooter" href="https://www.instagram.com/?hl=es-la" target="_blank">
+                <i class="fab fa-instagram-square fa-2x" aria-hidden="true"></i>&nbsp
+                Instagram
+              </a>
+            </li>
+            <li class="redes">
+              <a class="linksFooter" href="https://www.tumblr.com" target="_blank">
+                <i class="fab fa-tumblr-square fa-2x" aria-hidden="true"></i>&nbsp
+                Tumblr
+              </a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+
+          <!-- Links -->
+          <h5 class="text-uppercase">Más información</h5>
+
+          <ul class="list-unstyled">
+            <li>
+              <p>
+                <a data-toggle="collapse" href="#map-iframe" role="button" aria-expanded="false" aria-controls="collapseExample" class="linksFooter">
+                  Mostrar/Ocultar Ubicación en el mapa
+                </a>
+              </p>
+              <div class="collapse" id="map-iframe">
+                <div class="card card-body">
+                  <div class="embed-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1979.7189676964151!2d-73.1069087!3d7.0751177!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e683f7422d5d9c7%3A0xc00e4ac299fb1dda!2sCl.%2022%20%2329-28%2C%20Floridablanca%2C%20Santander!5e0!3m2!1ses-419!2sco!4v1581734329323!5m2!1ses-419!2sco" width="400em" height="300em" frameborder="0" style="border:0;" allowfullscreen="" ></iframe>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+            <li>
+              <a href="about.php" class="linksFooter">Sobre nosotros</a>
+            </li>
+          </ul>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">Esta página es un proyecto para la Universidad Industrial de Santander sin ánimos de lucro. © 2020 Copyright:
+      Pizzas el churco
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+</body>
+</html>
